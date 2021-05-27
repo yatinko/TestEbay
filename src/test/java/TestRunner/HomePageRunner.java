@@ -14,7 +14,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 	features="src/test/resources/Features/HomePage.feature",
 	glue="StepDefinitions",
-	tags= "@Test",
+	tags= "@Sc_04 and not @Ignore",
 	plugin= {
 			"pretty",
 			"html:target/CucmberTestReports/HTML-Reports",
@@ -23,6 +23,6 @@ import io.cucumber.testng.CucumberOptions;
 	monochrome=true
 )
 
-public class HomepageRunner extends AbstractTestNGCucumberTests {
+public class HomePageRunner extends AbstractTestNGCucumberTests {
 	
 }
