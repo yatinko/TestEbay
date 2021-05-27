@@ -10,7 +10,8 @@ Feature: HomePage
   @Test @Sc_02
   Scenario Outline: Successful display of relevant products
     Given User is on HomePage
-    When user enters search item and search category in searchbar from <rowNumber>
+    When user enters search item and search category in searchbar from <rowNumber> in "<sheetName>"
+    And clicks the Search button
     And clicks the Search button
     Then display relevant products
   

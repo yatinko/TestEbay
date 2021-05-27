@@ -14,7 +14,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 	features="src/test/resources/Features/HomePage.feature",
 	glue="StepDefinitions",
-	tags= "@Sc_04 and not @Ignore",
+	tags= "@Test and not @Ignore",
 	plugin= {
 			"pretty",
 			"html:target/CucmberTestReports/HTML-Reports",
