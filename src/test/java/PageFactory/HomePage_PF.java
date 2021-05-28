@@ -133,40 +133,10 @@ public class HomePage_PF extends BaseClass {
 	 	driver.navigate().to(actualUrl);
 	}
 	
-	public void switchThroughTabs() {
-		// Switching through tabs
-//		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
-//		
-//		driver.switchTo().window(tabs.get(1));
-		
+	public void checkPage() {
 		String url = driver.getCurrentUrl();
 		String currentUrl = url.toLowerCase();
 		Assert.assertEquals(currentUrl, actualUrl);
-		
-		// wait of 5 seconds
-//	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-//	    
-//	    driver.close();
-//	    
-//	    // Go back to parent
-//	    driver.switchTo().window(parent);
-
-//		for(int i = 1; i < tabs.size(); i++) {
-//			// Go to the first child window
-//			driver.switchTo().window(tabs.get(i));
-//			
-//			String currentUrl = driver.getCurrentUrl();
-//			System.out.println(i);
-//			System.out.println(currentUrl);
-//			System.out.println(urlList.get(i-1));
-//			Assert.assertEquals(currentUrl, urlList.get(i-1));
-//			
-//			// wait of 5 seconds
-//		    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-//		    
-//		    // Got back to parent
-//		    driver.switchTo().window(parent);
-//		}
 		
 	}
 	

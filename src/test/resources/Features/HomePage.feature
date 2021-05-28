@@ -58,3 +58,7 @@ Feature: HomePage
     | footer_component_excel_sheet	| 0			|
     | footer_component_excel_sheet	| 1			|
     | footer_component_excel_sheet	| 2			|
+    
+   @quit
+   Scenario: user closes the site
+   Given user wants to quit the browser

@@ -36,13 +36,14 @@ public class HomePageDefinitions extends BaseClass {
 	
 	@Before
 	public void setUp() {
-		initialization();
+		if(driver == null ) {
+			initialization();
+		}
 		home = new HomePage_PF();
 	}
 	
 	@After
 	public void wrapUp() {
-		driver.close();
 		System.out.println("==================================================================================================================================================================");
 	}
 
@@ -151,7 +152,7 @@ public class HomePageDefinitions extends BaseClass {
 
 	@Then("navigate to the appropriate page")
 	public void navigate_to_the_appropriate_page() {
-		home.switchThroughTabs();
+		home.checkPage();
 	}
 
 	@When("user clicks on a footer link from {int} in {string}")
@@ -162,5 +163,10 @@ public class HomePageDefinitions extends BaseClass {
         String element = testData.get(rowNumber).get("element");
         
         home.clickOnLink(element);
+	}
+	
+	@Given("user wants to quit the browser")
+	public void user_wants_to_quit_the_browser() {
+		driver.quit();
 	}
 }
