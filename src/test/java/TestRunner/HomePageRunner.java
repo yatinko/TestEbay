@@ -17,8 +17,8 @@ import io.cucumber.testng.CucumberOptions;
 	tags= "@Test and not @Ignore",
 	plugin= {
 			"pretty",
-			"html:target/CucmberTestReports/HTML-Reports",
-			"json:target/CucmberTestReports/CucumberJsonReport.json",
+			"html:target/cucumber-reports/cucumber-pretty.html",
+			"testng:target/cucumber-reports/CucumberTestReport.xml"
 		},
 	monochrome=true
 )
